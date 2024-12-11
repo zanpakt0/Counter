@@ -7,20 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
-    private var counter: Int = 0
-    @IBOutlet weak var upButton: UIButton!
-    @IBOutlet weak var Counter: UILabel!
+    private var counterNumber: Int = .zero
+    @IBOutlet private weak var upButton: UIButton!
+    @IBOutlet private weak var counterLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        Counter.text = "Значение счётчика: \(counter)"
+        counterLabel.text = "Значение счётчика: \(counterNumber)"
     }
 
     @IBAction func upCounter(_ sender: Any) {
-        counter += 1
-        Counter.text = "Значение счётчика: \(counter)"
+        counterNumber += 1
+        counterLabel.text = "Значение счётчика: \(counterNumber)"
     }
     
 }
